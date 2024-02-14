@@ -25,6 +25,10 @@ class NotificationPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
+          // 
+          // jihiho
+          // 
+          // kljjpjp
           
           children: [
             SizedBox(height: 120,),

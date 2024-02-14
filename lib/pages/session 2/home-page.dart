@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oech_app001/widgets/custom_bottom_bar.dart';
 
 class HomPage extends StatelessWidget {
   const HomPage({super.key});
@@ -20,7 +19,6 @@ class HomPage extends StatelessWidget {
         ),
       )
       ),
-      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }

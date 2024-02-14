@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oech_app001/widgets/custom_bottom_bar.dart';
+import 'package:oech_app001/widgets/custom_app_bar.dart';
 import 'package:oech_app001/widgets/send_package.dart';
 
 class SendPackage extends StatefulWidget {
@@ -24,21 +24,22 @@ class _SendPageState extends State<SendPackage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        shadowColor: Colors.white,
-        elevation: 4.0,
-        title:  Padding(
-          padding: const EdgeInsets.only(top: 50, bottom: 30),
-          child: Text('Send a package',
-          style: TextStyle(
-            color: Color(0xffa3a3a3),
-            fontWeight: FontWeight.w500,
-            fontSize: 20,
-          ),),
-        ),
-        centerTitle: true,
-      ),
+      // appBar:CustomAppBar(),
+           // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   shadowColor: Colors.white,
+      //   elevation: 4.0,
+      //   title:  Padding(
+      //     padding: const EdgeInsets.only(top: 50, bottom: 30),
+      //     child: Text('Send a package',
+      //     style: TextStyle(
+      //       color: Color(0xffa3a3a3),
+      //       fontWeight: FontWeight.w500,
+      //       fontSize: 20,
+      //     ),),
+      //   ),
+      //   centerTitle: true,
+      // ),
       body: SingleChildScrollView(
         child: Container(
           padding:const EdgeInsets.only(top: 30, left: 25, right: 25) ,
@@ -206,7 +207,9 @@ class _SendPageState extends State<SendPackage> {
               
         )
       ),
-      bottomNavigationBar: CustomBottomBar(),
     );
   }
+}
+
+class CustomAppBar {
 }

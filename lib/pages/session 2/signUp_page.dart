@@ -137,7 +137,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           buttonName: 'Sign Up',
                           buttonColor: const Color.fromRGBO(167, 167, 167, 1),
                           onTap: () {
-                            Navigator.pushNamed(context, '/home');
+                            Navigator.pushNamed(context, '/main-page');
                           },
                         ),
                       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oech_app001/widgets/custom_bottom_bar.dart';
 import 'package:oech_app001/widgets/profile_widget.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -9,7 +8,7 @@ class ProfilePage extends StatefulWidget {
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
-
+ var balance = '10.712:00';
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
@@ -66,7 +65,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       children: <TextSpan> [
                         TextSpan(
-                          text: 'N10,712:00',
+                          text: balance,
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
@@ -78,13 +77,27 @@ class _ProfilePageState extends State<ProfilePage> {
                       )
                     ],
                   ),
-                  SizedBox(width: 80,),
-                    Container(
-                    height: 24,
-                    width: 24,
-                    child: SvgPicture.asset('assets/images/s4_eye.svg'),
-                    
-                  ),
+                  Spacer(),
+                    InkWell(
+                      onTap: () {
+                        if (balance == '10.712:00') {
+                          balance = '***';
+                        } else if (balance == '***'){
+                          balance = '10.712:00';
+                        }
+                        setState(() {
+                          
+                        });
+                      },
+                      child: Container(
+                      height: 24,
+                      width: 24,
+
+                      child: balance == '***'? SvgPicture.asset('assets/images/eye_on.svg') : SvgPicture.asset('assets/images/s4_eye.svg'),
+                      
+                                        ),
+                    ),
+                    SizedBox(width: 25,)
                 ],
               ),
             ),
@@ -151,8 +164,6 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       
       ),
-      // BOTTOM BAR
-      bottomNavigationBar: const CustomBottomBar(),
     );
     
   }

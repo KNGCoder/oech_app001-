@@ -8,11 +8,14 @@ import 'package:oech_app001/pages/session%201/onboarding3.dart';
 import 'package:oech_app001/pages/session%201/onboarding4.dart';
 import 'package:oech_app001/pages/session%202/new_password_page.dart';
 import 'package:oech_app001/pages/session%202/signUp_page.dart';
-import 'package:oech_app001/pages/session%203/home_page.dart';
+import 'package:oech_app001/pages/session%203/main_page.dart';
+// import 'package:oech_app001/pages/session%203/home_page.dart';
 import 'package:oech_app001/pages/session%203/profile_page.dart';
 import 'package:oech_app001/pages/session%203/send_a_package.dart';
 import 'package:oech_app001/pages/session%203/notification_page.dart';
 import 'package:oech_app001/pages/session%204/wallet_page.dart';
+import 'package:oech_app001/pages/session_5/chats_page.dart';
+import 'package:oech_app001/pages/session_5/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -35,12 +38,17 @@ class MyApp extends StatelessWidget {
         '/newpass':(context) => const NewPasswordPage(),
         '/hompage':(context) => const HomPage(),
         // 3 session
+        '/main-page':(context) => const MainPage(),
         '/profile':(context) => const ProfilePage(),
         '/sendpack':(context) => const SendPackage(),
         '/notification':(context) => const NotificationPage(),
-        '/home':(context) => const HomePage(),
+        // '/home':(context) => const HomePage(),
         // 4 session
         '/wall':(context) => const WalletPage(),
+        '/chats-page':(context) => const ChatsPage(),
+        '/home-page':(context) => const HomePage()
+        // 5 session
+        
 
       },
     );

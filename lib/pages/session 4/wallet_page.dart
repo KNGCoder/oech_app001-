@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:oech_app001/widgets/custom_bottom_bar.dart';
 import 'package:oech_app001/widgets/top_up_button.dart';
 import 'package:oech_app001/widgets/trans_history_widget.dart';
 
@@ -199,7 +198,6 @@ class WalletPage extends StatelessWidget {
       ),
       ),
       // BOTTOM BAR
-      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }
